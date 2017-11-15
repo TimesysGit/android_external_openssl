@@ -17,11 +17,17 @@
 #ifndef OPENSSL_NO_CMS
 # define OPENSSL_NO_CMS
 #endif
+#ifndef OPENSSL_NO_COMP
+# define OPENSSL_NO_COMP
+#endif
 #ifndef OPENSSL_NO_DTLS1
 # define OPENSSL_NO_DTLS1
 #endif
 #ifndef OPENSSL_NO_EC_NISTP_64_GCC_128
 # define OPENSSL_NO_EC_NISTP_64_GCC_128
+#endif
+#ifndef OPENSSL_NO_ENGINE
+# define OPENSSL_NO_ENGINE
 #endif
 #ifndef OPENSSL_NO_GMP
 # define OPENSSL_NO_GMP
@@ -68,6 +74,12 @@
 #ifndef OPENSSL_NO_SHA0
 # define OPENSSL_NO_SHA0
 #endif
+#ifndef OPENSSL_NO_SSL2
+# define OPENSSL_NO_SSL2
+#endif
+#ifndef OPENSSL_NO_SSL3
+# define OPENSSL_NO_SSL3
+#endif
 #ifndef OPENSSL_NO_STATIC_ENGINE
 # define OPENSSL_NO_STATIC_ENGINE
 #endif
@@ -83,8 +95,14 @@
 #ifndef OPENSSL_THREADS
 # define OPENSSL_THREADS
 #endif
-#ifndef OPENSSL_NO_DYNAMIC_ENGINE
-# define OPENSSL_NO_DYNAMIC_ENGINE
+#ifndef OPENSSL_NO_HW
+# define OPENSSL_NO_HW
+#endif
+#ifndef OPENSSL_NO_STATIC_ENGINE
+# define OPENSSL_NO_STATIC_ENGINE
+#endif
+#ifndef OPENSSL_FIPS
+# define OPENSSL_FIPS
 #endif
 
 /* The OPENSSL_NO_* macros are also defined as NO_* if the application
@@ -104,11 +122,17 @@
 # if defined(OPENSSL_NO_CMS) && !defined(NO_CMS)
 #  define NO_CMS
 # endif
+# if defined(OPENSSL_NO_COMP) && !defined(NO_COMP)
+#  define NO_COMP
+# endif
 # if defined(OPENSSL_NO_DTLS1) && !defined(NO_DTLS1)
 #  define NO_DTLS1
 # endif
 # if defined(OPENSSL_NO_EC_NISTP_64_GCC_128) && !defined(NO_EC_NISTP_64_GCC_128)
 #  define NO_EC_NISTP_64_GCC_128
+# endif
+# if defined(OPENSSL_NO_ENGINE) && !defined(NO_ENGINE)
+#  define NO_ENGINE
 # endif
 # if defined(OPENSSL_NO_GMP) && !defined(NO_GMP)
 #  define NO_GMP
@@ -154,6 +178,12 @@
 # endif
 # if defined(OPENSSL_NO_SHA0) && !defined(NO_SHA0)
 #  define NO_SHA0
+# endif
+# if defined(OPENSSL_NO_SSL2) && !defined(NO_SSL2)
+#  define NO_SSL2
+# endif
+# if defined(OPENSSL_NO_SSL3) && !defined(NO_SSL3)
+#  define NO_SSL3
 # endif
 # if defined(OPENSSL_NO_STATIC_ENGINE) && !defined(NO_STATIC_ENGINE)
 #  define NO_STATIC_ENGINE

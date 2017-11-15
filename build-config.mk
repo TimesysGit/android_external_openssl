@@ -3,6 +3,7 @@
 #     ./import_openssl.sh import /path/to/openssl-1.0.1e.tar.gz
 #
 openssl_cflags := \
+  -DOPENSSL_PIC \
   -DOPENSSL_THREADS \
   -D_REENTRANT \
   -DDSO_DLFCN \
@@ -13,8 +14,10 @@ openssl_cflags := \
   -DOPENSSL_NO_CAPIENG \
   -DOPENSSL_NO_CAST \
   -DOPENSSL_NO_CMS \
+  -DOPENSSL_NO_COMP \
   -DOPENSSL_NO_DTLS1 \
   -DOPENSSL_NO_EC_NISTP_64_GCC_128 \
+  -DOPENSSL_NO_ENGINE \
   -DOPENSSL_NO_GMP \
   -DOPENSSL_NO_GOST \
   -DOPENSSL_NO_HEARTBEATS \
@@ -29,6 +32,8 @@ openssl_cflags := \
   -DOPENSSL_NO_SCTP \
   -DOPENSSL_NO_SEED \
   -DOPENSSL_NO_SHA0 \
+  -DOPENSSL_NO_SSL2 \
+  -DOPENSSL_NO_SSL3 \
   -DOPENSSL_NO_STATIC_ENGINE \
   -DOPENSSL_NO_STORE \
   -DOPENSSL_NO_WHIRLPOOL \

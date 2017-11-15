@@ -269,28 +269,6 @@ common_src_files := \
   crypto/ecdsa/ecs_ossl.c \
   crypto/ecdsa/ecs_sign.c \
   crypto/ecdsa/ecs_vrf.c \
-  crypto/engine/eng_all.c \
-  crypto/engine/eng_cnf.c \
-  crypto/engine/eng_ctrl.c \
-  crypto/engine/eng_dyn.c \
-  crypto/engine/eng_err.c \
-  crypto/engine/eng_fat.c \
-  crypto/engine/eng_init.c \
-  crypto/engine/eng_lib.c \
-  crypto/engine/eng_list.c \
-  crypto/engine/eng_pkey.c \
-  crypto/engine/eng_table.c \
-  crypto/engine/tb_asnmth.c \
-  crypto/engine/tb_cipher.c \
-  crypto/engine/tb_dh.c \
-  crypto/engine/tb_digest.c \
-  crypto/engine/tb_dsa.c \
-  crypto/engine/tb_ecdh.c \
-  crypto/engine/tb_ecdsa.c \
-  crypto/engine/tb_pkmeth.c \
-  crypto/engine/tb_rand.c \
-  crypto/engine/tb_rsa.c \
-  crypto/engine/tb_store.c \
   crypto/err/err.c \
   crypto/err/err_all.c \
   crypto/err/err_prn.c \
@@ -319,6 +297,7 @@ common_src_files := \
   crypto/evp/evp_cnf.c \
   crypto/evp/evp_enc.c \
   crypto/evp/evp_err.c \
+  crypto/evp/evp_fips.c \
   crypto/evp/evp_key.c \
   crypto/evp/evp_lib.c \
   crypto/evp/evp_pbe.c \
@@ -348,6 +327,8 @@ common_src_files := \
   crypto/evp/pmeth_gn.c \
   crypto/evp/pmeth_lib.c \
   crypto/ex_data.c \
+  crypto/fips_err.h \
+  crypto/fips_ers.c \
   crypto/hmac/hm_ameth.c \
   crypto/hmac/hm_pmeth.c \
   crypto/hmac/hmac.c \
@@ -369,6 +350,7 @@ common_src_files := \
   crypto/modes/ofb128.c \
   crypto/modes/xts128.c \
   crypto/o_dir.c \
+  crypto/o_fips.c \
   crypto/o_init.c \
   crypto/o_str.c \
   crypto/o_time.c \

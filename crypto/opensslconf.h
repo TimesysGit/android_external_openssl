@@ -17,17 +17,11 @@
 #ifndef OPENSSL_NO_CMS
 # define OPENSSL_NO_CMS
 #endif
-#ifndef OPENSSL_NO_COMP
-# define OPENSSL_NO_COMP
-#endif
 #ifndef OPENSSL_NO_DTLS1
 # define OPENSSL_NO_DTLS1
 #endif
 #ifndef OPENSSL_NO_EC_NISTP_64_GCC_128
 # define OPENSSL_NO_EC_NISTP_64_GCC_128
-#endif
-#ifndef OPENSSL_NO_ENGINE
-# define OPENSSL_NO_ENGINE
 #endif
 #ifndef OPENSSL_NO_GMP
 # define OPENSSL_NO_GMP
@@ -122,17 +116,11 @@
 # if defined(OPENSSL_NO_CMS) && !defined(NO_CMS)
 #  define NO_CMS
 # endif
-# if defined(OPENSSL_NO_COMP) && !defined(NO_COMP)
-#  define NO_COMP
-# endif
 # if defined(OPENSSL_NO_DTLS1) && !defined(NO_DTLS1)
 #  define NO_DTLS1
 # endif
 # if defined(OPENSSL_NO_EC_NISTP_64_GCC_128) && !defined(NO_EC_NISTP_64_GCC_128)
 #  define NO_EC_NISTP_64_GCC_128
-# endif
-# if defined(OPENSSL_NO_ENGINE) && !defined(NO_ENGINE)
-#  define NO_ENGINE
 # endif
 # if defined(OPENSSL_NO_GMP) && !defined(NO_GMP)
 #  define NO_GMP

@@ -269,6 +269,28 @@ common_src_files := \
   crypto/ecdsa/ecs_ossl.c \
   crypto/ecdsa/ecs_sign.c \
   crypto/ecdsa/ecs_vrf.c \
+  crypto/engine/eng_all.c \
+  crypto/engine/eng_cnf.c \
+  crypto/engine/eng_ctrl.c \
+  crypto/engine/eng_dyn.c \
+  crypto/engine/eng_err.c \
+  crypto/engine/eng_fat.c \
+  crypto/engine/eng_init.c \
+  crypto/engine/eng_lib.c \
+  crypto/engine/eng_list.c \
+  crypto/engine/eng_pkey.c \
+  crypto/engine/eng_table.c \
+  crypto/engine/tb_asnmth.c \
+  crypto/engine/tb_cipher.c \
+  crypto/engine/tb_dh.c \
+  crypto/engine/tb_digest.c \
+  crypto/engine/tb_dsa.c \
+  crypto/engine/tb_ecdh.c \
+  crypto/engine/tb_ecdsa.c \
+  crypto/engine/tb_pkmeth.c \
+  crypto/engine/tb_rand.c \
+  crypto/engine/tb_rsa.c \
+  crypto/engine/tb_store.c \
   crypto/err/err.c \
   crypto/err/err_all.c \
   crypto/err/err_prn.c \

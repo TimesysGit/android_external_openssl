@@ -66,14 +66,23 @@
 void OPENSSL_init(void)
 	{
 	static int done = 0;
+	int ret;
 	if (done)
 		return;
 	done = 1;
 #ifdef OPENSSL_FIPS
+	
 	FIPS_set_locking_callbacks(CRYPTO_lock, CRYPTO_add_lock);
 	FIPS_set_error_callbacks(ERR_put_error, ERR_add_error_vdata);
 	FIPS_set_malloc_callbacks(CRYPTO_malloc, CRYPTO_free);
 	RAND_init_fips();
+	
+#ifdef FORCE_FIPS_MODE
+	fprintf(stderr, "OPENSSL_init: Initializing FIPS and setting FIPS mode on.\n");
+	if(FIPS_mode_set(1) != 1) {
+		fprintf(stderr, "FIPS_mode_set failed: %lx.", ERR_get_error());
+	}
+#endif
 #endif
 #if 0
 	fprintf(stderr, "Called OPENSSL_init\n");

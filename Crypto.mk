@@ -97,6 +97,8 @@ LOCAL_LDFLAGS += \
 -D__compiler_offsetof=__builtin_offsetof -target arm-linux-androideabi -nostdlibinc \
 -Bprebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.7/arm-linux-androideabi/bin -mllvm -arm-enable-ehabi
 
+LOCAL_CFLAGS += -DFORCE_FIPS_MODE
+
 LOCAL_SRC_FILES += $(target_src_files)
 LOCAL_CFLAGS += $(target_c_flags)
 LOCAL_C_INCLUDES += $(target_c_includes)

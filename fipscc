@@ -1,9 +1,9 @@
 #!/bin/sh
 
-export CC=$ANDROID_BUILD_TOP/external/openssl/$1/bin/fipsld
+export CC=$ANDROID_BUILD_TOP/external/openssl-fips/$1/bin/fipsld
 export FIPSLD_CC=$2
-export FIPSLIBDIR=$ANDROID_BUILD_TOP/external/openssl/$1/lib
-export FIPS_SIG=$ANDROID_BUILD_TOP/external/openssl/$1/bin/incore
+export FIPSLIBDIR=$ANDROID_BUILD_TOP/external/openssl-fips/$1/lib
+export FIPS_SIG=$ANDROID_BUILD_TOP/external/openssl-fips/$1/bin/incore
 
 shift
 shift

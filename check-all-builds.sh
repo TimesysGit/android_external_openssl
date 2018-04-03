@@ -196,7 +196,7 @@ if [ "$DO_HELP" ]; then
 "Usage: $PROGNAME [options] [<build-type> ...]
 
 This script is used to ensure that all OpenSSL build variants compile
-properly. It can be used after modifying external/openssl/openssl.config
+properly. It can be used after modifying external/openssl-fips/openssl.config
 and re-running import_openssl.sh to check that any changes didn't break
 the build.
 
